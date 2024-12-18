@@ -3,7 +3,7 @@ local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 
 local teleportPosition = Vector3.new(149.16586303710938, 2506.633056640625, -0.9006454944610596)
-local teleportInterval = 13 -- Интервал телепортации в секундах
+local teleportInterval = 10 -- Интервал телепортации в секундах
 local isTeleportEnabled = false
 local lastTeleportTime = 0
 
