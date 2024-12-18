@@ -1,0 +1,53 @@
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+
+local teleportPosition = Vector3.new(149.16586303710938, 2506.633056640625, -0.9006454944610596)
+local teleportInterval = 13 -- Интервал телепортации в секундах
+local isTeleportEnabled = false
+local lastTeleportTime = 0
+
+
+local function teleportPlayer(player)
+  local character = player.Character
+  if character and character:FindFirstChild("HumanoidRootPart") then
+      character:MoveTo(teleportPosition)
+  end
+end
+
+
+
+local function toggleTeleport()
+    isTeleportEnabled = not isTeleportEnabled
+    if isTeleportEnabled then
+        game.StarterGui:SetCore("SendNotification", {
+	Title = " "; -- can be anything you'd like.
+	Text = "Телепорт включен"; -- also anything you'd like.
+	Duration = "5"; -- how long the notification will stay for.
+})
+    else
+        game.StarterGui:SetCore("SendNotification", {
+	Title = " "; -- can be anything you'd like.
+	Text = "Телепорт выключен"; -- also anything you'd like.
+	Duration = "5"; -- how long the notification will stay for.
+})
+    end
+end
+
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+	if gameProcessedEvent then return end
+	if input.KeyCode == Enum.KeyCode.Z then
+		toggleTeleport()
+	end
+end)
+
+RunService.Heartbeat:Connect(function(deltaTime)
+	if isTeleportEnabled then
+		if (tick() - lastTeleportTime) >= teleportInterval then
+			for _, player in ipairs(Players:GetPlayers()) do
+				teleportPlayer(player)
+			end
+			lastTeleportTime = tick()
+		end
+    end
+end)
