@@ -17,7 +17,7 @@ if not game:IsLoaded() then
     notLoaded:Destroy()
 end
 
-currentVersion = "0.3"
+currentVersion = "0.4"
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
@@ -4293,6 +4293,7 @@ function autoComplete(str,curText)
 end
 
 CMDs = {}
+CMDs[#CMDs + 1] = {NAME = 'mm2', DESC = 'Скрипт для Мардер мистор 2'}
 CMDs[#CMDs + 1] = {NAME = 'autofarm / podvalautofarm', DESC = 'Скрипт для Падения в подвал'}
 CMDs[#CMDs + 1] = {NAME = 'tsb / Battlegrounds', DESC = 'Скрипт для The Strongest Battlegrounds by skibiditoiletfan2007'}
 CMDs[#CMDs + 1] = {NAME = 'ch / chatbypass', DESC = 'Обход чата by Synergy Networks'}
@@ -10244,6 +10245,11 @@ addcmd('remotespy',{'rspy'},function(args, speaker)
 	notify("Loading",'Hold on a sec')
 	-- Full credit to exx, creator of SimpleSpy
 	-- also thanks to NoobSploit for fixing
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/SimpleSpyV3/main.lua"))()
+end)
+
+addcmd('mm2',{},function(args, speaker)
+	notify(" ",'Запускаю')
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/SimpleSpyV3/main.lua"))()
 end)
 
