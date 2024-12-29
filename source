@@ -10250,7 +10250,7 @@ end)
 
 addcmd('mm2',{},function(args, speaker)
 	notify(" ",'Запускаю')
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/SimpleSpyV3/main.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring"))()
 end)
 
 addcmd('podvalautofarm',{'autofarm'},function(args, speaker)
