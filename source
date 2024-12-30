@@ -10261,7 +10261,7 @@ addcmd('catwalk',{},function(args, speaker)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/dima9912/test/refs/heads/main/catwalk%20in%20roblox%20script"))()
 end)
 
-addcmd('Brookhaven,{},function(args, speaker)
+addcmd('Brookhaven',{},function(args, speaker)
 	notify(" ",'Запускаю')
 	-- Full credit to exx, creator of SimpleSpy
 	-- also thanks to NoobSploit for fixing
