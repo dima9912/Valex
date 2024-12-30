@@ -2927,7 +2927,7 @@ local loadedEventData = nil
 local jsonAttempts = 0
 function saves()
     if writefileExploit() and readfileExploit() and jsonAttempts < 10 then
-        local readSuccess, out = readfile("IY_FE.iy", true)
+        local readSuccess, out = readfile("SYMoon.Sk3d", true)
         if readSuccess then
             if out ~= nil and tostring(out):gsub("%s", "") ~= "" then
                 local success, response = pcall(function()
@@ -2955,14 +2955,14 @@ function saves()
                     jsonAttempts = jsonAttempts + 1
                     warn("Save Json Error:", response)
                     warn("Overwriting Save File")
-                    writefile("IY_FE.iy", defaults, true)
+                    writefile("SYMoon.Sk3d", defaults, true)
                     wait()
                     saves()
                 end
             else
-                writefile("IY_FE.iy", defaults, true)
+                writefile("SYMoon.Sk3d", defaults, true)
                 wait()
-                local dReadSuccess, dOut = readfile("IY_FE.iy", true)
+                local dReadSuccess, dOut = readfile("SYMoon.Sk3d", true)
                 if dReadSuccess and dOut ~= nil and tostring(dOut):gsub("%s", "") ~= "" then
                     saves()
                 else
@@ -2972,9 +2972,9 @@ function saves()
                 end
             end
         else
-            writefile("IY_FE.iy", defaults, true)
+            writefile("SYMoon.Sk3d", defaults, true)
             wait()
-            local dReadSuccess, dOut = readfile("IY_FE.iy", true)
+            local dReadSuccess, dOut = readfile("SYMoon.Sk3d", true)
             if dReadSuccess and dOut ~= nil and tostring(dOut):gsub("%s", "") ~= "" then
                 saves()
             else
@@ -3018,7 +3018,7 @@ function updatesaves()
 			currentScroll = {currentScroll.R,currentScroll.G,currentScroll.B};
 			eventBinds = eventEditor.SaveData()
 		}
-		writefileCooldown("IY_FE.iy", HttpService:JSONEncode(update))
+		writefileCooldown("SYMoon.Sk3d", HttpService:JSONEncode(update))
 	end
 end
 
@@ -6086,17 +6086,17 @@ end)
 PluginsGUI = PluginEditor.background
 
 function addPlugin(name)
-	if name:lower() == 'plugin file name' or name:lower() == 'iy_fe.iy' or name == 'iy_fe' then
+	if name:lower() == 'plugin file name' or name:lower() == 'symoon.sk3d' or name == 'symoon' then
 		notify('Plugin Error','Please enter a valid plugin')
 	else
 		local file
 		local fileName
-		if name:sub(-3) == '.iy' then
+		if name:sub(-3) == '.sk3d' then
 			pcall(function() file = readfile(name) end)
 			fileName = name
 		else
-			pcall(function() file = readfile(name..'.iy') end)
-			fileName = name..'.iy'
+			pcall(function() file = readfile(name..'.sk3d') end)
+			fileName = name..'.sk3d'
 		end
 		if file then
 			if not FindInTable(PluginsTable, fileName) then
@@ -6114,8 +6114,8 @@ function addPlugin(name)
 end
 
 function deletePlugin(name)
-	local pName = name..'.iy'
-	if name:sub(-3) == '.iy' then
+	local pName = name..'.sk3d'
+	if name:sub(-3) == '.sk3d' then
 		pName = name
 	end
 	for i = #cmds,1,-1 do
