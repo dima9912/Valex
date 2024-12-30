@@ -17,7 +17,7 @@ if not game:IsLoaded() then
     notLoaded:Destroy()
 end
 
-currentVersion = "0.4"
+currentVersion = "1.0"
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
@@ -4293,7 +4293,8 @@ function autoComplete(str,curText)
 end
 
 CMDs = {}
-CMDs[#CMDs + 1] = {NAME = 'mm2', DESC = 'Скрипт для Мардер мистор 2'}
+CMDs[#CMDs + 1] = {NAME = 'Brookhaven', DESC = 'Скрипт для Brookhaven'}
+CMDs[#CMDs + 1] = {NAME = 'mm2', DESC = 'Скрипт для Murder Mystery 2'}
 CMDs[#CMDs + 1] = {NAME = 'autofarm / podvalautofarm', DESC = 'Скрипт для Падения в подвал'}
 CMDs[#CMDs + 1] = {NAME = 'tsb / Battlegrounds', DESC = 'Скрипт для The Strongest Battlegrounds by skibiditoiletfan2007'}
 CMDs[#CMDs + 1] = {NAME = 'ch / chatbypass', DESC = 'Обход чата by Synergy Networks'}
@@ -10253,8 +10254,22 @@ addcmd('mm2',{},function(args, speaker)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring"))()
 end)
 
-addcmd('podvalautofarm',{'autofarm'},function(args, speaker)
+addcmd('catwalk',{},function(args, speaker)
 	notify(" ",'Запускаю')
+	-- Full credit to exx, creator of SimpleSpy
+	-- also thanks to NoobSploit for fixing
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/dima9912/test/refs/heads/main/catwalk%20in%20roblox%20script"))()
+end)
+
+addcmd('Brookhaven,{},function(args, speaker)
+	notify(" ",'Запускаю')
+	-- Full credit to exx, creator of SimpleSpy
+	-- also thanks to NoobSploit for fixing
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/kigredns/SanderXV4.2.2/refs/heads/main/New.lua"))()
+end)
+
+addcmd('podvalautofarm',{'autofarm'},function(args, speaker)
+	notify("Кнопка для включения Z",'Запускаю')
 	-- Full credit to exx, creator of SimpleSpy
 	-- also thanks to NoobSploit for fixing
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/dima9912/test/refs/heads/main/podvalautofarm"))()
