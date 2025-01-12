@@ -64,7 +64,7 @@ task.defer(function()
 
 	print("✅" .. rate .. "% (" .. Из .. ")")
 	print("⛔ " .. fails .. " Хуево")
-	print("⚠️ " .. undefined .. "Ошибки")
+	print("⚠️ " .. undefined .. " Ошибки")
 end)
 
 -- Cache
