@@ -1,8 +1,8 @@
 --Loader Sk3d.Yinzol👾--
 local games = {
     [{7002808196}] = "https://raw.githubusercontent.com/dima9912/test/refs/heads/main/KavanaSummerVisual",
-😶‍🌫️
-😶‍🌫️
+    [{71816718496622}] = "https://raw.githubusercontent.com/dima9912/test/refs/heads/main/Script.txt",
+    [{10449761463}] = "https://raw.githubusercontent.com/dima9912/test/refs/heads/main/Charactersrussianintsb",
 }
 
 for ids, url in next, games do
