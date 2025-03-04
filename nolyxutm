@@ -1,0 +1,5 @@
+local args = {
+    [1] = 27
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
