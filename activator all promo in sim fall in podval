@@ -1,0 +1,137 @@
+-- Первая функция
+local function script1()
+local args = {
+    [1] = "Testdollar"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script2()
+local args = {
+    [1] = "Testpodval"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script3()
+local args = {
+    [1] = "Perdedus"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script4()
+local args = {
+    [1] = "DreamFREE"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script5()
+local args = {
+    [1] = "Poco"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script6()
+local args = {
+    [1] = "Coinsss"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script7()
+local args = {
+    [1] = "Kilstak"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script8()
+local args = {
+    [1] = "Santaded"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script9()
+local args = {
+    [1] = "PLAYER"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script10()
+local args = {
+    [1] = "Santabaldi"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script11()
+local args = {
+    [1] = "5"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script12()
+local args = {
+    [1] = "666"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script13()
+local args = {
+    [1] = "Free!"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script14()
+local args = {
+    [1] = "bobux"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+local function script15()
+local args = {
+    [1] = "FREEBOBUX1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PromocodesRemotes"):WaitForChild("Activate"):FireServer(unpack(args))
+end
+
+-- Запуск 
+script1()
+script2()
+script3()
+script4()
+script5()
+script6()
+script7()
+script8()
+script9()
+script10()
+script11()
+script12()
+script13()
+script14()
+script15()
