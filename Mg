@@ -1,0 +1,236 @@
+-- Первая функция
+local function script1()
+local args = {
+    [1] = 27
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script2()
+local args = {
+    [1] = 26
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script3()
+local args = {
+    [1] = 25
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script4()
+local args = {
+    [1] = 24
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script5()
+local args = {
+    [1] = 23
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script6()
+local args = {
+    [1] = 22
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script7()
+local args = {
+    [1] = 21
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script8()
+local args = {
+    [1] = 20
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script9()
+local args = {
+    [1] = 19
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script10()
+local args = {
+    [1] = 18
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script11()
+local args = {
+    [1] = 17
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script12()
+local args = {
+    [1] = 16
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script13()
+local args = {
+    [1] = 15
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script14()
+local args = {
+    [1] = 14
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script15()
+local args = {
+    [1] = 13
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script16()
+local args = {
+    [1] = 12
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script17()
+local args = {
+    [1] = 11
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script18()
+local args = {
+    [1] = 10
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script19()
+local args = {
+    [1] = 9
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script20()
+local args = {
+    [1] = 8
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script21()
+local args = {
+    [1] = 7
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script22()
+local args = {
+    [1] = 6
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script23()
+local args = {
+    [1] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script24()
+local args = {
+    [1] = 4
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script25()
+local args = {
+    [1] = 3
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+local function script26()
+local args = {
+    [1] = 2
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Gift"):FireServer(unpack(args))
+end
+
+-- Запуск 
+script1()
+script2()
+script3()
+script4()
+script5()
+script6()
+script7()
+script8()
+script9()
+script10()
+script11()
+script12()
+script13()
+script14()
+script15()
+script16()
+script17()
+script18()
+script19()
+script20()
+script21()
+script22()
+script23()
+script24()
+script25()
+script26()
