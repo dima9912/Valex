@@ -1,0 +1,146 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+local Window = Library.CreateLib("Симулятор падения в подвал | BY SK3D.YINZOL", "LightTheme")
+
+-- MAIN
+local Main = Window:NewTab("Автофарм")
+local AutoFarmSection = Main:NewSection("Автофарм")
+
+AutoFarmSection:NewButton("Автофарм", "Автоматически зарабатывает монеты и подвалы", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/dima9912/test/refs/heads/main/podvalautofarm'))()
+end)
+
+local AntiAFKSection = Main:NewSection("АнтиАФК")
+AntiAFKSection:NewButton("АнтиАФК", "Отключает кик за 20 минутное бездействие", function()
+    local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+end)
+
+--Scripts
+local Scripts = Window:NewTab("Скрипты")
+local AdminSection = Scripts:NewSection("Скрипты")
+
+AdminSection:NewButton("Актировать все промокоды", "Скрипт", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/dima9912/test/refs/heads/main/activator%20all%20promo%20in%20sim%20fall%20in%20podval'))()
+end)
+AdminSection:NewButton("Получить 1000000+ (ПРОЧИТАЙТЕ ОПИСАНИЕ)", "Работает после если вы забрали первый подарок", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/dima9912/test/refs/heads/main/Mg'))()
+end)
+
+AdminSection:NewButton("SYMoon 1.4", "Скрипт", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/dima9912/test/refs/heads/main/source'))()
+end)
+
+AdminSection:NewButton("Touch fling", "Скрипт", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/dima9912/test/refs/heads/main/touchfling'))()
+end)
+
+AdminSection:NewButton("Tptool", "Скрипт", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/dima9912/test/refs/heads/main/tptool'))()
+end)
+
+local Badges = Window:NewTab("Бейджи")
+local BadgesSection = Badges:NewSection("Бейджи (в разработке)")
+
+-- Teleport
+local Teleport = Window:NewTab("Телепорт")
+local TeleportSection = Teleport:NewSection("Телепорт")
+
+TeleportSection:NewButton("Дно Подвала", "Дно Подвала", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(151.878555, 2473.12256, -11.338336, -0.996917307, -1.62090181e-08, -0.0784592554, -1.40863037e-08, 1, -2.76084489e-08, 0.0784592554, -2.64181406e-08, -0.996917307)
+end)
+
+TeleportSection:NewButton("Спавн", "Спавн", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(20.0370426, 3668.59399, 0.348342955, -0.00872660708, 9.71745351e-08, -0.999961913, -4.22107185e-08, 1, 9.75466108e-08, 0.999961913, 4.30603642e-08, -0.00872660708)
+end)
+
+TeleportSection:NewButton("Сирена 1", "Сирена 1", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-64.4435043, 3718.67773, -182.847885, 0.785880625, 0, 0.618378878, 0, 1, 0, -0.618378878, 0, 0.785880625)
+end)
+
+TeleportSection:NewButton("Сирена 2", "Сирена 2", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(262.690063, 3742.71436, 41.4942245, 0.998481512, 0.0137243187, 0.0533507392, -0.0166721288, 0.998335719, 0.0552070588, -0.0525042266, -0.0560126975, 0.997048557)
+end)
+
+TeleportSection:NewButton("Сирена 3", "Сирена 3", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-42.8533325, 3807.9231, 253.846512, 0.992261529, 0.111252777, 0.0551338196, -0.110711925, 0.993770361, -0.012778461, -0.0562120229, 0.00657559931, 0.998397171)
+end)
+
+TeleportSection:NewButton("Вышка", "Вышка", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-239.200531, 3754.82495, -154.693298, -0.0261760093, 1.71797643e-09, -0.999657333, -1.76185899e-09, 1, 1.7646995e-09, 0.999657333, 1.80744808e-09, -0.0261760093)
+end)
+
+TeleportSection:NewButton("Ресторан", "Ресторан", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-130.765656, 3670.54199, 108.239861, 0.00872602314, -2.32254016e-09, 0.999961913, -3.382819e-08, 1, 2.61782529e-09, -0.999961913, -3.38497443e-08, 0.00872602314)
+end)
+
+TeleportSection:NewButton("Крыша ресторана", "Крыша ресторана", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-123.730652, 3705.81299, 109.318642, 0.0871566683, 1.54008486e-08, -0.996194601, 9.55996393e-10, 1, 1.55433177e-08, 0.996194601, -2.30706232e-09, 0.0871566683)
+end)
+
+TeleportSection:NewButton("Черная таблица", "Черная таблица", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(248.495819, 3985.59058, 319.804688, 0.050004106, 2.03760333e-08, -0.998749018, -3.17719611e-08, 1, 1.88108373e-08, 0.998749018, 3.07915968e-08, 0.050004106)
+end)
+
+TeleportSection:NewButton("Команда внутри камня", "Команда внутри камня", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(198.015564, 3669.81372, 259.320099, 0.0517063774, 7.01225211e-09, 0.998662353, -2.63681166e-09, 1, -6.88512181e-09, -0.998662353, -2.27727992e-09, 0.0517063774)
+end)
+
+TeleportSection:NewButton("Команда с боссом внутри камня", "Команда с боссом внутри камня", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(190.731003, 3669.81665, 342.813293, 0.728544652, -5.71642751e-08, -0.684998274, 5.15610701e-08, 1, -2.8612817e-08, 0.684998274, -1.44735299e-08, 0.728544652)
+end)
+
+TeleportSection:NewButton("Клетка снаружи камня", "Клетка снаружи камня", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(267.045349, 3669.80518, 267.320862, 0.982253492, 3.67541308e-09, 0.187558055, -3.0478029e-09, 1, -3.63459618e-09, -0.187558055, 2.99845504e-09, 0.982253492)
+end)
+
+TeleportSection:NewButton("Управление колесом", "Управление колесом", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(170.410751, 3708.37939, -30.6135941, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+TeleportSection:NewButton("Туалет", "Туалет", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-49.4117432, 3669.93945, -174.285858, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+
+TeleportSection:NewButton("Лагерь", "Лагерь", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(212.736969, 3668.61548, -210.638931, 0.649448931, 5.59117197e-08, -0.760405183, -3.73437032e-08, 1, 4.16342409e-08, 0.760405183, 1.35703104e-09, 0.649448931)
+end)
+
+TeleportSection:NewButton("Безопасная зона", "Безопасная зона", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-149.067673, 3669.59399, -44.4164009, -0.0174535085, 8.31327895e-09, 0.999847651, -1.13010195e-07, 1, -1.02872706e-08, -0.999847651, -1.13172533e-07, -0.0174535085)
+end)
+
+TeleportSection:NewButton("Крыша безопасной зоны", "Крыша безопасной зоны", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-163.604813, 3710.18359, -41.1334305, 0.113204539, -1.21008104e-09, -0.993571699, 5.96710947e-08, 1, 5.58083268e-09, 0.993571699, -5.99192873e-08, 0.113204539)
+end)
+
+TeleportSection:NewButton("Управление клеткой", "Управление клеткой", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-79.0818253, 3673.55835, -235.114502, 0.953716874, -7.18187954e-09, -0.300706118, 1.69497727e-09, 1, -1.85076079e-08, 0.300706118, 1.71413284e-08, 0.953716874)
+end)
+
+TeleportSection:NewButton("Клетка", "Клетка", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-78.8118668, 3673.8418, -237.3078, 0.961262405, 8.72382486e-08, -0.275634915, -6.19181861e-08, 1, 1.00562836e-07, 0.275634915, -7.96004613e-08, 0.961262405)
+end)
+
+-- Misc
+local Misc = Window:NewTab("Другое")
+local PowerSection = Misc:NewSection("Скорость")
+
+PowerSection:NewSlider("Скорость", "Скорость персонажа", 100, 15, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+local ServerSection = Misc:NewSection("Сервер")
+
+ServerSection:NewButton("Перезайти (Скрипт нужно перезапустить)", "Перезайти на сервер (на этот, не на другой)", function()
+    local ts = game:GetService("TeleportService")
+    local p = game:GetService("Players").LocalPlayer
+
+    ts:Teleport(game.PlaceId, p)
+end)
