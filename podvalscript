@@ -125,7 +125,7 @@ TeleportSection:NewButton("Управление клеткой", "Управле
 end)
 
 TeleportSection:NewButton("Клетка", "Клетка", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-78.8118668, 3673.8418, -237.3078, 0.961262405, 8.72382486e-08, -0.275634915, -6.19181861e-08, 1, 1.00562836e-07, 0.275634915, -7.96004613e-08, 0.961262405)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14.6250153, 3669.05225, -262.01062, -0.999847651, 2.30039032e-09, 0.0174534004, 2.23390084e-09, 1, -3.82903576e-09, -0.0174534004, -3.78946341e-09, -0.999847651)
 end)
 
 -- Misc
