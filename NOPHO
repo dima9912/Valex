@@ -1,0 +1,39 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+-- Функция телепортации
+local function teleportPlayer()
+    -- Ждем появление персонажа
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+    
+    -- Устанавливаем целевые координаты и поворот
+    local targetCFrame = CFrame.new(
+        38.2471313, 7.61999989, 147.295578,
+        0.00419828435, -8.22103497e-16, -0.999991179,
+        -1.14684021e-07, 1, -4.81481188e-10,
+        0.999991179, 1.14685029e-07, 0.00419828435
+    )
+    
+    -- Выполняем телепортацию
+    humanoidRootPart.CFrame = targetCFrame
+    
+    -- Выводим сообщение в консоль
+    local args = {
+	{
+		trainId = "default",
+		maxMembers = 1,
+		gameMode = "Normal"
+	}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("Network"):WaitForChild("RemoteEvent"):WaitForChild("CreateParty"):FireServer(unpack(args))
+end
+
+-- Вызываем функцию телепортации
+teleportPlayer()
+
+-- Дополнительно: автоматическая телепортация при возрождении
+player.CharacterAdded:Connect(function(character)
+    task.wait(0.1) -- Небольшая задержка для стабильности
+    teleportPlayer()
+end)
