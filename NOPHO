@@ -17,7 +17,8 @@ local function teleportPlayer()
     
     -- Выполняем телепортацию
     humanoidRootPart.CFrame = targetCFrame
-    
+    wait(0.5)
+
     -- Выводим сообщение в консоль
     local args = {
 	{
