@@ -1,0 +1,23 @@
+--pensi--
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local TeleportService = game:GetService("TeleportService")
+placeId = 116495829188952
+-- Первое сообщение
+print("sdsd")
+wait(5)
+
+-- Функция для отслеживания смерти
+local function setupDeathDetection()
+    -- Проверяем текущее состояние
+    if player.Character then
+        local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            humanoid.Died:Connect(function()
+                TeleportService:Teleport(placeId)
+            end)
+        end
+    end
+    
+-- Запускаем отслеживание смерти
+setupDeathDetection()
