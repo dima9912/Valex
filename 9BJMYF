@@ -45,7 +45,6 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end
 
 local function gg9()
-local function gg0()
 spawn(function()
 local message = Instance.new("Message",workspace)
 message.Text = "Готово"
