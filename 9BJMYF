@@ -1,3 +1,12 @@
+local function gg0()
+spawn(function()
+local message = Instance.new("Message",workspace)
+message.Text = "Не двигайте камерой и мышкой"
+wait(5.5)
+message:Destroy()
+end)
+end
+
 local function gg1()
 workspace.Camera.CFrame = CFrame.new (54.017849, 2060.96021, 49.6371727, 0.0828390494, 0.972200751, -0.219006062, 0, 0.219761401, 0.975553751, 0.996562958, -0.0808139443, 0.018204825)
 end
@@ -35,6 +44,17 @@ s = 15
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end
 
+local function gg9()
+local function gg0()
+spawn(function()
+local message = Instance.new("Message",workspace)
+message.Text = "Готово"
+wait(1.0)
+message:Destroy()
+end)
+end
+
+gg0()
 gg1()
 gg2()
 gg3()
@@ -42,3 +62,4 @@ gg4()
 gg5()
 gg7()
 gg8()
+gg9()
