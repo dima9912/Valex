@@ -1,0 +1,724 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Симулятор падения в канаву | BY SK3D.YINZOL", "GrapeTheme")
+
+-- MAIN
+local Main = Window:NewTab("Автофарм")
+local AutoFarmSection = Main:NewSection("Автофарм")
+
+AutoFarmSection:NewButton("Автофарм", "Автоматически зарабатывает монеты и смерти", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/dima9912/test/refs/heads/main/makan'))()
+end)
+
+local AntiAFKSection = Main:NewSection("АнтиАФК")
+AntiAFKSection:NewButton("АнтиАФК", "Отключает кик за 20 минутное бездействие", function()
+    local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+end)
+
+--Scripts
+local Scripts = Window:NewTab("Скрипты")
+local AdminSection = Scripts:NewSection("Скрипты")
+
+AdminSection:NewButton("Infinite Yield", "Скрипт", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/dima9912/Scripts/refs/heads/main/source"))()
+end)
+
+AdminSection:NewButton("Touch fling", "Скрипт", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/dima9912/test/refs/heads/main/touchfling'))()
+end)
+
+AdminSection:NewButton("TpTool", "Скрипт", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/dima9912/test/refs/heads/main/tptool'))()
+end)
+
+AdminSection:NewButton("Gravity Lay", "Скрипт", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Underssky/GravityLayScript/refs/heads/main/MainGravityLay.txt'))()
+end)
+
+local Badges = Window:NewTab("Бейджи")
+local BadgesSection = Badges:NewSection("Бейджи")
+BadgesSection:NewButton("69G интернет убивает", "доказано учёными и не только", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(118.023949, 2129.65112, 221.844757, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+BadgesSection:NewButton("Пук", "Ты зачем пёрнул на ЧИСТЫЙ УНИТАЗ?!", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(54.9689369, 2050.85083, 26.765892, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+BadgesSection:NewButton("Золотой Пук", "puknite od ponosa на золотой уни таз (шанс его появления: 1%)", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(54.9689369, 2050.85083, 26.765892, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+BadgesSection:NewButton("Чаевые", "потратьте 10 R$ в пустую", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.55165672, 2051.37134, 61.75, 0.997166991, -0.0752194822, 0, 0.0752194822, 0.997166991, 0, 0, 0, 1)
+end)
+
+local Troll = Window:NewTab("Тролл")
+local TrollSection = Troll:NewSection("Таблички")
+TrollSection:NewButton("Заблокировать дверь туалета 1", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(30.2997627, 2052.7998, -56.1489983, 0.707134247, 0, -0.707079291, 0, 1, 0, 0.707079291, 0, 0.707134247)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать дверь туалета 2", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(-252.034729, 2052.80029, 241.75946, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать дверь туалета 3", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(225.549774, 2024.74976, 69.6010132, 0.707134247, 0, -0.707079291, 0, 1, 0, 0.707079291, 0, 0.707134247)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать Стакарный стол", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(55.375, 2051.9248, 49.25, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать Стол 1 (1 Стул)", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(142.368271, 2050.30029, 127.868271, -0.707134247, 0, -0.707079291, 0, 1, 0, 0.707079291, 0, -0.707134247)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать Стол 1 (2 Стул)", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(158.631729, 2050.30029, 144.131729, 0.707134247, 0, 0.707079291, 0, 1, 0, -0.707079291, 0, 0.707134247)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать Стол Золотой (1 Стул)", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(-242, 2099.30029, 213, -1.1920929e-07, -0, -1.00000012, 0, 1, -0, 1.00000012, 0, -1.1920929e-07)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать Стол Золотой (2 Стул)", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(-219, 2099.30029, 213, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать Стол 2 (1 Стул)", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(-180, 2050.30029, 192, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать Стол 2 (2 Стул)", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(-157, 2050.30029, 192, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать Стол 3 (1 Стул)", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(-211, 2050.30029, 246, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать Стол 3 (2 Стул)", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(-234, 2050.30029, 246, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать Стол 4 (1 Стул)", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(149.650192, 2022.55029, -107.4636, -0.984812617, 0, -0.173621148, 0, 1, 0, 0.173621148, 0, -0.984812617)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewButton("Заблокировать Стол 4 (2 Стул)", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(153.644104, 2022.55029, -84.8130188, 0.984812498, 0, 0.173621148, 0, 1, 0, -0.173621148, 0, 0.984812498)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
+TrollSection:NewTextBox("Заебывать", "Тролл", function()
+end)
+
+local Trolllo = Window:NewTab("Имба")
+local TrollloSection = Trolllo:NewSection("Хуйня имбовая")
+
+TrollloSection:NewButton("Включить бессмертие", "Имба", function()
+local function gg0()
+spawn(function()
+local message = Instance.new("Message",workspace)
+message.Text = "Не двигайте камерой и мышкой"
+wait(1.5)
+message:Destroy()
+end)
+end
+
+local function gg1()
+workspace.Camera.CFrame = CFrame.new (54.017849, 2060.96021, 49.6371727, 0.0828390494, 0.972200751, -0.219006062, 0, 0.219761401, 0.975553751, 0.996562958, -0.0808139443, 0.018204825)
+end
+
+local function gg2()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(55.375, 2051.9248, 49.25, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end
+local function gg3()
+game.Players.LocalPlayer.PlayerGui.UI.CraftFrame.Name = ("Penis")
+end
+
+wait(1.5)
+local function gg4()
+-- Активация ProximityPrompt через локальный скрипт (работает только если античит не мониторит RemoteEvents)
+local proximityPrompt = workspace:FindFirstChild("CTInteract").ProximityPrompt
+if proximityPrompt then
+    proximityPrompt:InputHoldBegin() -- Симулируем начало взаимодействия
+    task.wait(0.5)
+    proximityPrompt:InputHoldEnd() -- Завершаем действие
+end
+end
+
+local function gg5()
+game.Players.LocalPlayer.PlayerGui.UI.Penis.Name = ("CraftFrame")
+end
+
+wait(0.5)
+local function gg7()
+j = 50
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = j
+end
+
+local function gg8()
+s = 15
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end
+
+local function gg9()
+spawn(function()
+local message = Instance.new("Message",workspace)
+message.Text = "Готово"
+wait(1.0)
+message:Destroy()
+end)
+end
+
+gg0()
+gg1()
+gg2()
+gg3()
+gg4()
+gg5()
+gg7()
+gg8()
+gg9()
+    end)
+
+TrollloSection:NewButton("Отключить бессмертие", "Имба", function()
+local function nugopac1()
+game.Players.LocalPlayer.PlayerGui.UI.CraftFrame.Visible = true
+end
+
+local function nugopac2()
+game.Players.LocalPlayer.PlayerGui.UI.CraftFrame.Visible = false
+end
+
+nugopac1()
+nugopac2()
+end)
+
+local TrollloSection = Trolllo:NewSection("Пвп")
+TrollloSection:NewButton("Бить без задержки (почти) КНОПКА E", "Пвп", function()
+-- LocalScript
+
+local UserInputService = game:GetService("UserInputService")
+
+-- Функция, которая будет вызываться при нажатии клавиши
+local function onInputBegan(input, gameProcessedEvent)
+    -- Проверяем, что событие не обработано игрой (например, не открыто меню)
+    if not gameProcessedEvent then
+        -- Проверяем, была ли нажата клавиша "E"
+        if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.E then
+         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("HitRequest"):InvokeServer()
+        end
+    end
+end
+
+-- Подписываемся на событие ввода
+UserInputService.InputBegan:Connect(onInputBegan)
+end)
+
+TrollloSection:NewButton("Cбор оружие КНОПКА Q", "Пвп", function()
+local UIS = game:GetService("UserInputService")  
+local Player = game.Players.LocalPlayer  
+
+-- Рекурсивный поиск папок с игнором "zabor"  
+local function scanFolders(parent)  
+    for _, child in ipairs(parent:GetChildren()) do  
+        if child:IsA("Folder") and not child:FindFirstChild("zabor") then  
+            -- Проверяем Hitbox/Handle в текущей папке  
+            local hitbox = child:FindFirstChild("Hitbox")  
+            local handle = child:FindFirstChild("Handle")  
+            local targetPart  
+
+            if hitbox and hitbox:FindFirstChildOfClass("TouchTransmitter") then  
+                targetPart = hitbox  
+            elseif handle and handle:FindFirstChildOfClass("TouchTransmitter") then  
+                targetPart = handle  
+            end  
+
+            -- Активация, если найдена цель  
+            if targetPart and Player.Character then  
+                local root = Player.Character:FindFirstChild("HumanoidRootPart")  
+                if root then  
+                    firetouchinterest(root, targetPart, 0)  
+                    firetouchinterest(root, targetPart, 1)  
+                    print("⚡ Активировано в папке:", child:GetFullName())  
+                end  
+            end  
+
+            -- Рекурсивно проверяем вложенные папки  
+            scanFolders(child)  
+        end  
+    end  
+end  
+
+-- Бинд на Q  
+UIS.InputBegan:Connect(function(input)  
+    if input.KeyCode == Enum.KeyCode.Q then  
+        scanFolders(workspace) -- Сканируем весь Workspace  
+        print("🔍 Просканировано!")  
+    end  
+end)  
+end)
+local TrollloSection = Trolllo:NewSection("Другое")
+TrollloSection:NewButton("Удалить бананы (АВТО)", "Тест", function()
+local Workspace = game:GetService("Workspace")
+local RunService = game:GetService("RunService")
+
+-- Функция для отложенного удаления
+local function delayedDestroy(part)
+    if part and part.Parent then
+        -- Ждем 1 миллисекунду перед удалением
+        task.delay(0.001, function()
+            if part and part.Parent then
+                part:Destroy()
+            end
+        end)
+    end
+end
+
+-- Удаление существующих Banana-частей
+for _, descendant in ipairs(Workspace:GetDescendants()) do
+    if descendant:IsA("BasePart") and descendant.Name == "Banana" then
+        delayedDestroy(descendant)
+    end
+end
+
+-- Отслеживание новых Banana-частей
+Workspace.DescendantAdded:Connect(function(descendant)
+    if descendant:IsA("BasePart") and descendant.Name == "Banana" then
+        delayedDestroy(descendant)
+    end
+end)
+
+-- Дополнительная защита для быстро создаваемых объектов
+local function fastCleanup()
+    for _, part in ipairs(Workspace:GetDescendants()) do
+        if part:IsA("BasePart") and part.Name == "Banana" then
+            delayedDestroy(part)
+        end
+    end
+end
+
+-- Регулярная проверка каждые 0.5 секунд
+while true do
+    task.wait(0.5)
+    fastCleanup()
+end
+end)
+
+TrollloSection:NewButton("Удалить опасные объекты и рэгдоллы", "Тест", function()
+local Workspace = game:GetService("Workspace")
+
+-- Список папок для удаления
+local foldersToRemove = {
+    "FireParts",
+    "KillParts",
+    "PoisonParts",
+    "RagdollParts"
+}
+
+-- Удаляем все указанные папки однократно при запуске
+for _, folderName in ipairs(foldersToRemove) do
+    local folder = Workspace:FindFirstChild(folderName)
+    if folder then
+        folder:Destroy()
+        print("Удалена папка: " .. folderName)
+    else
+        print("Папка не найдена: " .. folderName)
+    end
+end
+
+print("Очистка папок завершена")
+end)
+
+-- Teleport
+local Teleport = Window:NewTab("Телепорт")
+local TeleportSection = Teleport:NewSection("Телепорт")
+
+TeleportSection:NewButton("Спавн", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 2048.75, -55, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+
+TeleportSection:NewButton("Туалет (1)", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(30.2997627, 2052.7998, -56.1489983, 0.707134247, 0, -0.707079291, 0, 1, 0, 0.707079291, 0, 0.707134247)
+end)
+
+TeleportSection:NewButton("Туалет (2)", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-252.034729, 2052.80029, 241.75946, -1, 0, 0, 0, 1, 0, 0, 0, -17)
+end)
+
+TeleportSection:NewButton("Туалет (3)", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(225.549774, 2024.74976, 69.6010132, 0.707134247, 0, -0.707079291, 0, 1, 0, 0.707079291, 0, 0.707134247)
+end)
+
+TeleportSection:NewButton("Стакарный стол", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(57.625, 2051.55713, 49.375, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+TeleportSection:NewButton("Унитаз", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(54.9689369, 2050.85083, 26.765892, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+TeleportSection:NewButton("Дом (1)", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(106.532761, 2051.49976, 24.2633381, -1.15204614e-06, 5.28581872e-08, 1, -3.81606213e-09, 1, -5.28581943e-08, -1, -3.81612297e-09, -1.15204614e-06)
+end)
+
+TeleportSection:NewButton("Дом (2)", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-188.167389, 2051.54956, 188.60997, -0.999961913, 9.37248217e-08, -0.00872686133, 9.36764977e-08, 1, 5.94614358e-09, 0.00872686133, 5.12841503e-09, -0.999961913)
+end)
+
+TeleportSection:NewButton("Костер", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-74.4358826, 2051.49976, 101.073082, -0.99619478, -7.91551784e-08, 0.0871550292, -7.9318518e-08, 1, 1.58898661e-09, -0.0871550292, -5.3300675e-09, -0.99619478)
+end)
+
+TeleportSection:NewButton("Автомат", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-145.605911, 2051.49976, 249.280167, -8.60800409e-09, -1.30389477e-08, 1, -9.90899025e-08, 1, 1.30389468e-08, -1, -9.90899025e-08, -8.60800498e-09)
+end)
+
+TeleportSection:NewButton("Унитаз разраба", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-219.42366, 2062.87427, 226.667587, -0.965368748, -0.0337762199, 0.258693516, -0.03262702, 0.999429405, 0.00873559155, -0.258840978, -7.33090565e-06, -0.965919971)
+end)
+
+TeleportSection:NewButton("Трейдовый стол (1)", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(142.368271, 2050.30029, 127.868271, -0.707134247, 0, -0.707079291, 0, 1, 0, 0.707079291, 0, -0.707134247)
+end)
+
+TeleportSection:NewButton("Трейдовый стол (2)", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-180, 2050.30029, 192, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+end)
+
+TeleportSection:NewButton("Трейдовый стол (3)", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-211, 2050.30029, 246, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+end)
+
+TeleportSection:NewButton("Трейдовый стол (4)", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(149.650192, 2022.55029, -107.4636, -0.984812617, 0, -0.173621148, 0, 1, 0, 0.173621148, 0, -0.984812617)
+end)
+
+TeleportSection:NewButton("Золотой стол", "Телепорт", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-242, 2099.30029, 213, -1.1920929e-07, -0, -1.00000012, 0, 1, -0, 1.00000012, 0, -1.1920929e-07)
+end)
+
+local Lmal = Window:NewTab("Записки")
+local LmalSection = Lmal:NewSection("Записки")
+
+LmalSection:NewButton("Первая записка", "Записки", function()
+-- Fire a proximity prompt
+local proximityPrompt = workspace.Papers["1"].ProximityPrompt
+
+fireproximityprompt(proximityPrompt)
+end)
+
+LmalSection:NewButton("Вторая записка", "Записки", function()
+-- Fire a proximity prompt
+local proximityPrompt = workspace.Papers["2"].ProximityPrompt
+
+fireproximityprompt(proximityPrompt)
+end)
+
+LmalSection:NewButton("Третья записка", "Записки", function()
+-- Fire a proximity prompt
+local proximityPrompt = workspace.Papers["3"].ProximityPrompt
+
+fireproximityprompt(proximityPrompt)
+end)
+
+LmalSection:NewButton("Четвертая записка", "Записки", function()
+-- Fire a proximity prompt
+local proximityPrompt = workspace.Papers["4"].ProximityPrompt
+
+fireproximityprompt(proximityPrompt)
+end)
+
+LmalSection:NewButton("Пятая записка", "Записки", function()
+-- Fire a proximity prompt
+local proximityPrompt = workspace.Papers["brawlstarsdolbaeb417lore"].ProximityPrompt
+
+fireproximityprompt(proximityPrompt)
+end)
+
+LmalSection:NewButton("Шестая записка", "Записки", function()
+-- Fire a proximity prompt
+local proximityPrompt = workspace.Papers["kek"].ProximityPrompt
+
+fireproximityprompt(proximityPrompt)
+end)
+
+LmalSection:NewButton("Седьмая записка", "Записки", function()
+-- Fire a proximity prompt
+local proximityPrompt = workspace.Papers["light"].ProximityPrompt
+
+fireproximityprompt(proximityPrompt)
+end)
+
+LmalSection:NewButton("Восьмая записка", "Записки", function()
+-- Fire a proximity prompt
+local proximityPrompt = workspace.Papers["lmao"].ProximityPrompt
+
+fireproximityprompt(proximityPrompt)
+end)
+
+LmalSection:NewButton("Девятая записка", "Записки", function()
+-- Fire a proximity prompt
+local proximityPrompt = workspace.Papers["sorry"].ProximityPrompt
+
+fireproximityprompt(proximityPrompt)
+end)
+
+LmalSection:NewButton("Десятая записка", "Записки", function()
+-- Fire a proximity prompt
+local proximityPrompt = workspace.Papers["turnir"].ProximityPrompt
+
+fireproximityprompt(proximityPrompt)
+end)
+
+-- Misc
+local Misc = Window:NewTab("Всякое")
+local PowerSection = Misc:NewSection("Игрок")
+
+PowerSection:NewSlider("Скорость", "Скорость", 50, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PowerSection:NewSlider("Прыжок", "Прыжок", 200, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local ServerSection = Misc:NewSection("Сервер")
+ServerSection:NewButton("Перезайти (Скрипт нужно перезапустить)", "Перезайти на сервер (на этот, не на другой)", function()
+    local ts = game:GetService("TeleportService")
+    local p = game:GetService("Players").LocalPlayer
+
+    ts:Teleport(game.PlaceId, p)
+end)
