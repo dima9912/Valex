@@ -20,6 +20,27 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
 end)
 end)
 
+local xyiSection = Main:NewSection("Хуйня")
+xyiSection:NewButton("Рэгдолл", "lol", function()
+local part = workspace.RagdollParts:GetChildren()[7]
+local player = game.Players.LocalPlayer.Character
+local hrp = player:FindFirstChildWhichIsA("BasePart")
+
+firetouchinterest(part,hrp,0)
+task.wait()
+firetouchinterest(part,hrp,1)
+end)
+
+xyiSection:NewButton("Сдохнуть", "lol", function()
+local part = workspace.KillParts.K
+local player = game.Players.LocalPlayer.Character
+local hrp = player:FindFirstChildWhichIsA("BasePart")
+
+firetouchinterest(part,hrp,0)
+task.wait()
+firetouchinterest(part,hrp,1)
+end)
+
 --Scripts
 local Scripts = Window:NewTab("Скрипты")
 local AdminSection = Scripts:NewSection("Скрипты")
@@ -338,9 +359,6 @@ end
 
 penis1()
 penis2()
-end)
-
-TrollSection:NewTextBox("Заебывать", "Тролл", function()
 end)
 
 local Trolllo = Window:NewTab("Имба")
