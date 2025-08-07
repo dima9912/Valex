@@ -41,6 +41,30 @@ task.wait()
 firetouchinterest(part,hrp,1)
 end)
 
+xyiSection:NewButton("Сдохнуть (Быстрый)", "lol", function()
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Respawn"):InvokeServer()
+end)
+
+xyiSection:NewButton("ПОНОС", "lol", function()
+local part = workspace.PoisonParts.Union
+local player = game.Players.LocalPlayer.Character
+local hrp = player:FindFirstChildWhichIsA("BasePart")
+
+firetouchinterest(part,hrp,0)
+task.wait()
+firetouchinterest(part,hrp,1)
+end)
+
+xyiSection:NewButton("Шашлык", "lol", function()
+local part = workspace.FireParts.FireTouch
+local player = game.Players.LocalPlayer.Character
+local hrp = player:FindFirstChildWhichIsA("BasePart")
+
+firetouchinterest(part,hrp,0)
+task.wait()
+firetouchinterest(part,hrp,1)
+end)
+
 --Scripts
 local Scripts = Window:NewTab("Скрипты")
 local AdminSection = Scripts:NewSection("Скрипты")
