@@ -64,17 +64,17 @@ local function activatePoisonEffect()
     end
     
 
-    firetouchinterest(poisonPart, hrp, 0) -- Begin touch
-    RunService.Heartbeat:Wait() -- Минимальная задержка
-    firetouchinterest(poisonPart, hrp, 1) -- End touch
+    firetouchinterest(poisonPart, hrp, 0) 
+    RunService.Heartbeat:Wait() 
+    firetouchinterest(poisonPart, hrp, 1)
     
     return true
 end
 
 
-while task.wait(0.001) do
+while task.wait(0.1) do
     if not activatePoisonEffect() then
-        break -- Автоматическая остановка при health < 1
+        break 
     end
 end
 end)
@@ -461,12 +461,12 @@ end
 
 wait(1.5)
 local function gg4()
--- Активация ProximityPrompt через локальный скрипт (работает только если античит не мониторит RemoteEvents)
+
 local proximityPrompt = workspace:FindFirstChild("CTInteract").ProximityPrompt
 if proximityPrompt then
-    proximityPrompt:InputHoldBegin() -- Симулируем начало взаимодействия
+    proximityPrompt:InputHoldBegin()
     task.wait(0.5)
-    proximityPrompt:InputHoldEnd() -- Завершаем действие
+    proximityPrompt:InputHoldEnd() 
 end
 end
 
@@ -520,22 +520,22 @@ end)
 
 local TrollloSection = Trolllo:NewSection("Пвп")
 TrollloSection:NewButton("Бить без задержки (почти) КНОПКА E", "Пвп", function()
--- LocalScript
+
 
 local UserInputService = game:GetService("UserInputService")
 
--- Функция, которая будет вызываться при нажатии клавиши
+
 local function onInputBegan(input, gameProcessedEvent)
-    -- Проверяем, что событие не обработано игрой (например, не открыто меню)
+
     if not gameProcessedEvent then
-        -- Проверяем, была ли нажата клавиша "E"
+
         if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.E then
          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("HitRequest"):InvokeServer()
         end
     end
 end
 
--- Подписываемся на событие ввода
+
 UserInputService.InputBegan:Connect(onInputBegan)
 end)
 
@@ -543,11 +543,11 @@ TrollloSection:NewButton("Cбор оружие КНОПКА Q", "Пвп", functi
 local UIS = game:GetService("UserInputService")  
 local Player = game.Players.LocalPlayer  
 
--- Рекурсивный поиск папок с игнором "zabor"  
+
 local function scanFolders(parent)  
     for _, child in ipairs(parent:GetChildren()) do  
         if child:IsA("Folder") and not child:FindFirstChild("zabor") then  
-            -- Проверяем Hitbox/Handle в текущей папке  
+    
             local hitbox = child:FindFirstChild("Hitbox")  
             local handle = child:FindFirstChild("Handle")  
             local targetPart  
@@ -558,17 +558,17 @@ local function scanFolders(parent)
                 targetPart = handle  
             end  
 
-            -- Активация, если найдена цель  
+
             if targetPart and Player.Character then  
                 local root = Player.Character:FindFirstChild("HumanoidRootPart")  
                 if root then  
                     firetouchinterest(root, targetPart, 0)  
                     firetouchinterest(root, targetPart, 1)  
-                    print("⚡ Активировано в папке:", child:GetFullName())  
+
                 end  
             end  
 
-            -- Рекурсивно проверяем вложенные папки  
+
             scanFolders(child)  
         end  
     end  
@@ -577,8 +577,8 @@ end
 -- Бинд на Q  
 UIS.InputBegan:Connect(function(input)  
     if input.KeyCode == Enum.KeyCode.Q then  
-        scanFolders(workspace) -- Сканируем весь Workspace  
-        print("🔍 Просканировано!")  
+        scanFolders(workspace) 
+
     end  
 end)  
 end)
@@ -587,10 +587,10 @@ TrollloSection:NewButton("Удалить бананы (АВТО)", "Тест", f
 local Workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
 
--- Функция для отложенного удаления
+
 local function delayedDestroy(part)
     if part and part.Parent then
-        -- Ждем 1 миллисекунду перед удалением
+
         task.delay(0.001, function()
             if part and part.Parent then
                 part:Destroy()
@@ -599,21 +599,21 @@ local function delayedDestroy(part)
     end
 end
 
--- Удаление существующих Banana-частей
+
 for _, descendant in ipairs(Workspace:GetDescendants()) do
     if descendant:IsA("BasePart") and descendant.Name == "Banana" then
         delayedDestroy(descendant)
     end
 end
 
--- Отслеживание новых Banana-частей
+
 Workspace.DescendantAdded:Connect(function(descendant)
     if descendant:IsA("BasePart") and descendant.Name == "Banana" then
         delayedDestroy(descendant)
     end
 end)
 
--- Дополнительная защита для быстро создаваемых объектов
+
 local function fastCleanup()
     for _, part in ipairs(Workspace:GetDescendants()) do
         if part:IsA("BasePart") and part.Name == "Banana" then
@@ -622,7 +622,7 @@ local function fastCleanup()
     end
 end
 
--- Регулярная проверка каждые 0.5 секунд
+
 while true do
     task.wait(0.5)
     fastCleanup()
@@ -632,7 +632,7 @@ end)
 TrollloSection:NewButton("Удалить опасные объекты и рэгдоллы", "Тест", function()
 local Workspace = game:GetService("Workspace")
 
--- Список папок для удаления
+
 local foldersToRemove = {
     "FireParts",
     "KillParts",
@@ -640,18 +640,18 @@ local foldersToRemove = {
     "RagdollParts"
 }
 
--- Удаляем все указанные папки однократно при запуске
+
 for _, folderName in ipairs(foldersToRemove) do
     local folder = Workspace:FindFirstChild(folderName)
     if folder then
         folder:Destroy()
-        print("Удалена папка: " .. folderName)
+
     else
-        print("Папка не найдена: " .. folderName)
+
     end
 end
 
-print("Очистка папок завершена")
+
 end)
 
 -- Teleport
