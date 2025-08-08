@@ -89,7 +89,7 @@ task.wait()
 firetouchinterest(part,hrp,1)
 end)
 
-local XLLLLSection = Main:NewSection("Убрать панель командую")
+local XLLLLSection = Main:NewSection("Панель (другую)")
 XLLLLSection:NewButton("Убрать", "lol", function()
 loll = game:GetService("Players").LocalPlayer.PlayerGui.KCoreUI
 loll:Destroy()
