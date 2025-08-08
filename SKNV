@@ -46,13 +46,39 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Respa
 end)
 
 xyiSection:NewButton("ПОНОС", "lol", function()
-local part = workspace.PoisonParts.Union
-local player = game.Players.LocalPlayer.Character
-local hrp = player:FindFirstChildWhichIsA("BasePart")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
 
-firetouchinterest(part,hrp,0)
-task.wait()
-firetouchinterest(part,hrp,1)
+
+local function activatePoisonEffect()
+    local player = Players.LocalPlayer
+    if not player or not player.Character then return end
+    
+    local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+    local humanoid = player.Character:FindFirstChild("Humanoid")
+    local poisonPart = workspace:FindFirstChild("PoisonParts") and workspace.PoisonParts:FindFirstChild("Union")
+    
+
+    if not hrp or not humanoid or not poisonPart or humanoid.Health < 1 then
+        return false
+    end
+    
+
+    firetouchinterest(poisonPart, hrp, 0) -- Begin touch
+    RunService.Heartbeat:Wait() -- Минимальная задержка
+    firetouchinterest(poisonPart, hrp, 1) -- End touch
+    
+    return true
+end
+
+
+while task.wait(0.001) do
+    if not activatePoisonEffect() then
+        break -- Автоматическая остановка при health < 1
+    end
+end
+
+
 end)
 
 xyiSection:NewButton("Шашлык", "lol", function()
