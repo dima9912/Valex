@@ -77,8 +77,6 @@ while task.wait(0.001) do
         break -- Автоматическая остановка при health < 1
     end
 end
-
-
 end)
 
 xyiSection:NewButton("Шашлык", "lol", function()
