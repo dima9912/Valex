@@ -215,6 +215,26 @@ penis1()
 penis2()
 end)
 
+TrollSection:NewButton("Заблокировать канализацию 1", "Тролл", function()
+local function penis1()
+local args = {
+	"\208\159\208\190\209\129\209\130\208\176\208\178\208\184\209\130\209\140 \209\130\208\176\208\177\208\187\208\184\209\135\208\186\209\131"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("TakeItem"):FireServer(unpack(args))
+end
+
+local function penis2()
+local args = {
+	"create",
+	CFrame.new(-84.2484818, 2048.50049, 83.8960419, 0.99999994, 7.52313463e-06, 4.20212746e-06, -7.52208143e-06, 1.00000012, -1.04092942e-06, -4.20212746e-06, 1.04340052e-06, 0.99999994)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SignManager"):InvokeServer(unpack(args))
+end
+
+penis1()
+penis2()
+end)
+
 TrollSection:NewButton("Заблокировать Стол 1 (1 Стул)", "Тролл", function()
 local function penis1()
 local args = {
