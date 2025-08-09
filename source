@@ -4293,6 +4293,7 @@ function autoComplete(str,curText)
 end
 
 CMDs = {}
+CMDs[#CMDs + 1] = {NAME = 'scare / spook [player]', DESC = 'xyi'}
 CMDs[#CMDs + 1] = {NAME = 'jerk', DESC = 'idihaxy'}
 CMDs[#CMDs + 1] = {NAME = 'Brookhaven', DESC = 'Скрипт для Brookhaven'}
 CMDs[#CMDs + 1] = {NAME = 'mm2', DESC = 'Скрипт для Murder Mystery 2'}
@@ -10193,6 +10194,25 @@ addcmd('oldconsole',{},function(args, speaker)
 	end
 	wait(1)
 	notify('Console','Press F9 to open the console')
+end)
+
+addcmd("scare", {"spook"}, function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    local oldpos = nil
+
+    for _, v in pairs(players) do
+        local root = speaker.Character and getRoot(speaker.Character)
+        local target = Players[v]
+        local targetRoot = target and target.Character and getRoot(target.Character)
+
+        if root and targetRoot and target ~= speaker then
+            oldpos = root.CFrame
+            root.CFrame = targetRoot.CFrame + targetRoot.CFrame.lookVector * 2
+            root.CFrame = CFrame.new(root.Position, targetRoot.Position)
+            task.wait(0.5)
+            root.CFrame = oldpos
+        end
+    end
 end)
 
 addcmd('explorer', {'dex'}, function(args, speaker)
