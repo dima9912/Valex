@@ -1,0 +1,13 @@
+local Players = game:GetService("Players")
+local LocalPlayer = game.Players.LocalPlayer
+local UserInputService = game:GetService("UserInputService")
+
+        if UserInputService.TouchEnabled then
+
+            LocalPlayer:Kick("Скрипт еще не сделан для мобильных устройств")
+        else
+
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/dima9912/Scripts/refs/heads/main/SKNV"))()
+            
+        end
+
