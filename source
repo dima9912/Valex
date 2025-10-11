@@ -4293,6 +4293,7 @@ function autoComplete(str,curText)
 end
 
 CMDs = {}
+CMDs[#CMDs + 1] = {NAME = 'unsuspendchat', DESC = 'Unsuspends you from text chat'}
 CMDs[#CMDs + 1] = {NAME = 'scare / spook [player]', DESC = 'xyi'}
 CMDs[#CMDs + 1] = {NAME = 'jerk', DESC = 'idihaxy'}
 CMDs[#CMDs + 1] = {NAME = 'Brookhaven', DESC = 'Скрипт для Brookhaven'}
@@ -6709,6 +6710,14 @@ addcmd("rejoin", {"rj"}, function(args, speaker)
 	else
 		TeleportService:TeleportToPlaceInstance(PlaceId, JobId, Players.LocalPlayer)
 	end
+end)
+
+addcmd("unsuspendchat", {}, function(args, speaker)
+	if replicatesignal then
+        replicatesignal(TextChatService.UpdateChatTimeout, speaker.UserId, 0, 10)
+    else
+        notify("Incompatible Exploit", "Your exploit does not support this command (missing replicatesignal)")
+    end
 end)
 
 addcmd("autorejoin", {"autorj"}, function(args, speaker)
