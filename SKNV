@@ -439,71 +439,22 @@ local Trolllo = Window:NewTab("Имба")
 local TrollloSection = Trolllo:NewSection("Хуйня имбовая")
 
 TrollloSection:NewButton("Включить бессмертие", "Имба", function()
-local function gg0()
-spawn(function()
-local message = Instance.new("Message",workspace)
-message.Text = "Не двигайте камерой и мышкой"
-wait(1.5)
-message:Destroy()
-end)
-end
+local aktubproximitypromptcyka = workspace.CTInteract.ProximityPrompt
+local j = 50
+local s = 16
+local UIKAVANS = game.Players.LocalPlayer.PlayerGui.UI
 
-local function gg1()
 workspace.Camera.CFrame = CFrame.new (54.017849, 2060.96021, 49.6371727, 0.0828390494, 0.972200751, -0.219006062, 0, 0.219761401, 0.975553751, 0.996562958, -0.0808139443, 0.018204825)
-end
-
-local function gg2()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(55.375, 2051.9248, 49.25, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-end
-local function gg3()
-game.Players.LocalPlayer.PlayerGui.UI.CraftFrame.Name = ("Penis")
-end
-
-wait(1.5)
-local function gg4()
-
-local proximityPrompt = workspace:FindFirstChild("CTInteract").ProximityPrompt
-if proximityPrompt then
-    proximityPrompt:InputHoldBegin()
-    task.wait(0.5)
-    proximityPrompt:InputHoldEnd() 
-end
-end
-
-local function gg5()
-game.Players.LocalPlayer.PlayerGui.UI.Penis.Name = ("CraftFrame")
-end
-
-wait(0.5)
-local function gg7()
-j = 50
+task.wait(0.1)
+UIKAVANS.CraftFrame.Name = ("Penis")
+task.wait(0.2)
+fireproximityprompt(aktubproximitypromptcyka)
+task.wait(0.5)
+UIKAVANS.Penis.Name = ("CraftFrame")
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = j
-end
-
-local function gg8()
-s = 15
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end
-
-local function gg9()
-spawn(function()
-local message = Instance.new("Message",workspace)
-message.Text = "Готово"
-wait(1.0)
-message:Destroy()
 end)
-end
-
-gg0()
-gg1()
-gg2()
-gg3()
-gg4()
-gg5()
-gg7()
-gg8()
-gg9()
-    end)
 
 TrollloSection:NewButton("Отключить бессмертие", "Имба", function()
 local function nugopac1()
@@ -652,6 +603,47 @@ for _, folderName in ipairs(foldersToRemove) do
 end
 
 
+end)
+
+local DolbaebBrawl = Window:NewTab("BrawlStarsDolbaeb417")
+local DolbaebBrawlSection = DolbaebBrawl:NewSection("BrawlStarsDolbaeb417")
+
+DolbaebBrawlSection:NewButton("Забагать BrawlStarsDolbaeb417", "пидор анал пизду провал", function()
+NPCHUMANOID = workspace.TutNPC.NPC
+Tutnpc = workspace.TutNPC
+
+local Foldertut = Instance.new("Folder")
+Foldertut.Parent = workspace
+Foldertut.Name = "humanoid"
+
+getgenv().pizdakakazta = true
+
+while pizdakakazta do
+NPCHUMANOID.Parent = Foldertut
+task.wait(0.1)
+Foldertut.NPC.Parent = Tutnpc
+end
+end)
+
+DolbaebBrawlSection:NewButton("Отбагать", "пидор анал пизду провал", function()
+Tutnpc = workspace.TutNPC
+Foldertut = workspace.humanoid
+
+Foldertut.NPC.Parent = Tutnpc
+Foldertut:Destroy()
+getgenv().pizdakakazta = false
+end)
+
+DolbaebBrawlSection:NewButton("Респавн (В тесте)", "пидор анал пизду провал", function()
+workspace.TutNPC.Head.CFrame = CFrame.new(-5.02071095, 2048.95923, 30.9624977, -0.715463161, -0.698616385, 0.00690237572, 0.00606432604, 0.00366925332, 0.999974906, -0.698624134, 0.715487063, 0.0016114217)
+workspace.TutNPC.Torso.CFrame = CFrame.new(-5.02071095, 2048.95923, 30.9624977, -0.715463161, -0.698616385, 0.00690237572, 0.00606432604, 0.00366925332, 0.999974906, -0.698624134, 0.715487063, 0.0016114217)
+workspace.TutNPC["Right Arm"].CFrame = CFrame.new(-5.02071095, 2048.95923, 30.9624977, -0.715463161, -0.698616385, 0.00690237572, 0.00606432604, 0.00366925332, 0.999974906, -0.698624134, 0.715487063, 0.0016114217)
+workspace.TutNPC["Left Arm"].CFrame = CFrame.new(-5.02071095, 2048.95923, 30.9624977, -0.715463161, -0.698616385, 0.00690237572, 0.00606432604, 0.00366925332, 0.999974906, -0.698624134, 0.715487063, 0.0016114217)
+workspace.TutNPC["Right Leg"].CFrame = CFrame.new(-5.02071095, 2048.95923, 30.9624977, -0.715463161, -0.698616385, 0.00690237572, 0.00606432604, 0.00366925332, 0.999974906, -0.698624134, 0.715487063, 0.0016114217)
+workspace.TutNPC["Left Leg"].CFrame = CFrame.new(-5.02071095, 2048.95923, 30.9624977, -0.715463161, -0.698616385, 0.00690237572, 0.00606432604, 0.00366925332, 0.999974906, -0.698624134, 0.715487063, 0.0016114217)
+workspace.TutNPC.NPC.MaxHealth = "inf"
+workspace.TutNPC.NPC.Health = "inf"
+workspace.TutNPC.HumanoidRootPart.CFrame = CFrame.new(-5.02071095, 2048.95923, 30.9624977, -0.715463161, -0.698616385, 0.00690237572, 0.00606432604, 0.00366925332, 0.999974906, -0.698624134, 0.715487063, 0.0016114217)
 end)
 
 -- Teleport
