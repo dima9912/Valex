@@ -1,0 +1,5 @@
+game:GetService("Players").LocalPlayer.PlayerScripts.AnimationPlayerRRR.Disabled = true
+game:GetService("Players").LocalPlayer.PlayerGui.WaterMark:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.Version:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.TopbarStandard:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.UserAnimSelection.Donation:Destroy()
