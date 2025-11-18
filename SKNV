@@ -718,73 +718,63 @@ local Lmal = Window:NewTab("Записки")
 local LmalSection = Lmal:NewSection("Записки")
 
 LmalSection:NewButton("Первая записка", "Записки", function()
--- Fire a proximity prompt
-local proximityPrompt = workspace.Papers["1"].ProximityPrompt
-
-fireproximityprompt(proximityPrompt)
+game:GetService("Players").LocalPlayer.PlayerGui.UI.Paper.Playing = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Frame.TextLabel.Text = "\t\t1/3 \n\t\t\n\t\tЯ являюсь одним из жителей данного дома и я горю желанием рассказать про существо, уже успевшее покинуть данный мир и труп которого лежит рядом с данной запиской. \n\t\tЭтот голубь кажется... Неземным... Я бы даже сказал, с другой вселенной. Дело в том, что \"голубем\" мы называем костюм на хэллоуин. Но живое существо? Мой сосед увидел данную аномалию. Когда он уже в моей квартире начал наговаривать на меня, я сначала не поверил и пытался его успокоить. Ну, потом вы знаете, что произошло. \n\t\tЧто-ж, я бы написал что-нибудь ещё, но боюсь, здесь моего времени достаточно. Найдёт лишь кто-нибудь остальные записи? Только время скажет...\n\t"
 end)
 
 LmalSection:NewButton("Вторая записка", "Записки", function()
--- Fire a proximity prompt
-local proximityPrompt = workspace.Papers["2"].ProximityPrompt
-
-fireproximityprompt(proximityPrompt)
+game:GetService("Players").LocalPlayer.PlayerGui.UI.Paper.Playing = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Frame.TextLabel.Text = "\t\t2/3 \n\t\t\n\t\tДаже не раздумывая, кто это и почему он здесь, сосед начал входить в каждую квартиру, показывая этого голубя на своих ладонях. Позже я обнаружил еду в подъезде для него. Все начали обыскивать холодильники и нести еду петлёй, чтобы хотя бы как-то угодить этому существу. \n\t\tТут-то я подумал, что я живу в проклятой вселенной, ведь не только ресурсы и еда были ограничены, но и существа ДАННОЙ вселенной не знают, как их правильно использовать. И это только одна из десятков страшных вещей здесь. <s>Я бы обсуждал, как кое-кто пытался избавится от <b>ЕЩЁ ОДНОГО</b> странного существа, которое кому-то мешало спать, но дело не в этом.</s> \n\t\tЕда в подъезде постепенно портилась и покрывалась плесенью, холодильники всё пустели и пустели. Какой-то баран даже нашёл чей-то тайный запас еды вне дома. Тут я и понял, чем это может закончиться...\n\t"
 end)
 
 LmalSection:NewButton("Третья записка", "Записки", function()
--- Fire a proximity prompt
-local proximityPrompt = workspace.Papers["3"].ProximityPrompt
-
-fireproximityprompt(proximityPrompt)
+game:GetService("Players").LocalPlayer.PlayerGui.UI.Paper.Playing = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Frame.TextLabel.Text = "\t\t3/3 \n\t\t\n\t\t... \n\t\tЧестно сказать, я ожидал кое-что другое... Запасы еды почти были исчерпаны и нам оставалось только есть испорченное из подъезда, но... Через несколько дней, голубь был обнаружен мёртвым... Мы все собрались попрощаться с нашим иноземным существом, а именно постоять 5-10 минут и идти обратно по своим делам. \n\t\tЧто-ж, я не знаю, если мне радоваться или печалиться, но возле трупа мы также заметили неизвестные предметы... Кругообразная коробка с неизвестным содержимым, а также холодное оружие. Мы толком не могли понять причину смерти, и даже я стал заинтересован в этой ситуации. \n\t\t\n\t\tН              ,    .., ___  \n\t""
 end)
 
 LmalSection:NewButton("Четвертая записка", "Записки", function()
--- Fire a proximity prompt
-local proximityPrompt = workspace.Papers["4"].ProximityPrompt
-
-fireproximityprompt(proximityPrompt)
+game:GetService("Players").LocalPlayer.PlayerGui.UI.Paper.Playing = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Frame.TextLabel.Text = "\t\t\\\"Не грусти.\n\tЕсли тебя не прощает весь мир, я прощу тебе.\n\tНе грусти.\n\tЕсли весь мир не простишь, я прощу тебе.\n\tТак поведай же мне.\n\tЧто надо, чтоб простил меня ты?\\\"\n\t\t\n\t\t<b>- Александр Блок.</b>\n\t"
 end)
 
 LmalSection:NewButton("Пятая записка", "Записки", function()
--- Fire a proximity prompt
-local proximityPrompt = workspace.Papers["brawlstarsdolbaeb417lore"].ProximityPrompt
-
-fireproximityprompt(proximityPrompt)
+game:GetService("Players").LocalPlayer.PlayerGui.UI.Paper.Playing = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Frame.TextLabel.Text = "\t<b>Понедельник - охота на инопланетных существ <s>(Г)</s>\n\tВторник - охота на инопланетных существ <s>(Г)</s>\n\tСреда - охота на инопланетных существ <s>(Г)</s>\n\tЧетверг - охота на инопланетных существ <s>(Г)</s>\n\tПятница - охота на инопланетных существ <s>(Г)</s></b>\n\tСуббота - брал стас\n\t<b>Воскресенье - охота на инопланетных существ <s>(Г)</s></b>\n\t"
 end)
 
-LmalSection:NewButton("Шестая записка", "Записки", function()
--- Fire a proximity prompt
-local proximityPrompt = workspace.Papers["kek"].ProximityPrompt
-
-fireproximityprompt(proximityPrompt)
+LmalSection:NewButton("Шестая записка", "Записки", function() 
+game:GetService("Players").LocalPlayer.PlayerGui.UI.Paper.Playing = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Frame.TextLabel.Text = "\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t           <b>01:00-04:00</b>\n\t"
 end)
 
-LmalSection:NewButton("Седьмая записка", "Записки", function()
--- Fire a proximity prompt
-local proximityPrompt = workspace.Papers["light"].ProximityPrompt
-
-fireproximityprompt(proximityPrompt)
+LmalSection:NewButton("Седьмая записка", "Записки", function() 
+game:GetService("Players").LocalPlayer.PlayerGui.UI.Paper.Playing = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Frame.TextLabel.Text = "\tНикогда не думали, за что держится верёвка с лампой?\n\tЯ тоже.\n\t"
 end)
 
-LmalSection:NewButton("Восьмая записка", "Записки", function()
--- Fire a proximity prompt
-local proximityPrompt = workspace.Papers["lmao"].ProximityPrompt
-
-fireproximityprompt(proximityPrompt)
+LmalSection:NewButton("Восьмая записка", "Записки", function() 
+game:GetService("Players").LocalPlayer.PlayerGui.UI.Paper.Playing = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Frame.TextLabel.Text = "\t\tкто прочитал тот бот \n\t\t\n\t\t- BrawlStarsDolbaeb417\n\t"
 end)
 
 LmalSection:NewButton("Девятая записка", "Записки", function()
--- Fire a proximity prompt
-local proximityPrompt = workspace.Papers["sorry"].ProximityPrompt
-
-fireproximityprompt(proximityPrompt)
+game:GetService("Players").LocalPlayer.PlayerGui.UI.Paper.Playing = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Frame.TextLabel.Text = "\tуехал в отпуск. извините за причинённые неудобства.\n\t\n\t"
 end)
 
-LmalSection:NewButton("Десятая записка", "Записки", function()
--- Fire a proximity prompt
-local proximityPrompt = workspace.Papers["turnir"].ProximityPrompt
-
-fireproximityprompt(proximityPrompt)
+LmalSection:NewButton("Десятая записка", "Записки", function() 
+game:GetService("Players").LocalPlayer.PlayerGui.UI.Paper.Playing = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.UI.PaperFrame.Frame.TextLabel.Text = "\tПриглашаем всех <s>школьников</s> людей принять участие в турнире по рестлингу в популярной видеоигре для мобильных устройств под названием Brawl Stars. Приз - 100.000 Гемов.\n\t<b>Кастинг состоится 11 марта 2022, турнир - 29 апреля 2169 года на сайте <u>https://bit.ly/3mnNomN</u></b>\n\t"
 end)
 
 -- Misc
