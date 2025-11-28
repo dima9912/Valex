@@ -1,3 +1,12 @@
+
+local id = game.Players.LocalPlayer.UserId
+
+for _, plot in pairs(workspace.Plots:GetChildren()) do
+    if plot:IsA("Model") then
+        local at = plot:GetAttribute("Owner")
+        if at == id then
+--юзать plot.Хуцня
+
 local CoreGui = game:GetService("CoreGui")
 local Players = game:GetService("Players")
 local nameforall = "Pizda"
