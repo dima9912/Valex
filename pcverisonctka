@@ -1,11 +1,11 @@
 local id = game.Players.LocalPlayer.UserId
+ofdodldl = nil
 
 for _, plot in pairs(workspace.Plots:GetChildren()) do
     if plot:IsA("Model") then
         local at = plot:GetAttribute("Owner")
         if at == id then
 --юзать plot.Хуцня
-
 local CoreGui = game:GetService("CoreGui")
 local Players = game:GetService("Players")
 local nameforall = "Pizda"
@@ -62,8 +62,42 @@ didiblat.Parent = button1
 button1.MouseButton1Click:Connect(function()
 Players.LocalPlayer.Character.HumanoidRootPart.CFrame = plot.AnimalTarget.CFrame
 end)
+
+local button2 = Instance.new("TextButton")
+button2.Parent = frame
+button2.Size = UDim2.new(0, 130, 0, 50)
+button2.Position = UDim2.new(0, 38, 0, 110)
+button2.Text = "Авто-спиздилка"
+button2.Font = Enum.Font.Gotham
+button2.TextSize = 15
+button2.Name = nameforall
+
+local uuuui = Instance.new("UICorner")
+uuuui.Parent = button2
+uuuui.Name = nameforall
+
+getgenv().autosteal = true
+
+button2.MouseButton1Click:Connect(function()
+while autosteal do
+if Players.LocalPlayer:GetAttribute("Stealing") == true then
+    ofdodldl = Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    task.wait(0.1)
+	Players.LocalPlayer.Character.HumanoidRootPart.CFrame = plot.AnimalTarget.CFrame
+	task.wait(0.2)
+	Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ofdodldl
+end
+task.wait(0.1)
+end
+
+end)
 end
 end
 end
 
-workspace.Part:Destroy()
+while true do
+	for i = 1, 20 do
+	workspace:WaitForChild("Part"):Destroy()
+	end
+	task.wait(0.1)
+end
